@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://audelcroix-pass:4OC7boVujlKN6thG@socialmonkeys.ug2xe.mongodb.net/socialMonkeyDB?retryWrites=true&w=majority",
+  "jwtSecretKey": "CTFEscpPqFkrkJ52GNQ9"
+}

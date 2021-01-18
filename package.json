@@ -1,0 +1,38 @@
+{
+  "name": "socialmonkeys",
+  "version": "1.0.0",
+  "description": "A social network clone project by Aurélien Delcroix",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Aurélien Delcroix",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.0",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.1",
+    "express-rate-limit": "^5.2.3",
+    "express-validator": "^6.7.0",
+    "helmet": "^4.2.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.4",
+    "multer": "^1.4.2",
+    "sharp": "^0.26.3",
+    "slugify": "^1.4.6",
+    "validator": "^13.5.1",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

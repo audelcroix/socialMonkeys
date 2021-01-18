@@ -1,0 +1,452 @@
+/* GENERAL */
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  padding-bottom: 5rem;
+}
+
+.ut-mr-10 {
+  margin-right: 10px;
+}
+
+.ut-ml-10 {
+  margin-left: 10px;
+}
+
+/* ICONES */
+.i-md {
+  font-size: 2rem;
+}
+
+.i-sm {
+  font-size: 1rem;
+}
+
+/* navbar toggle icon */
+.custom-toggler.navbar-toggler {
+  border-color: black;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem; /* Footer height */
+}
+
+/* CARDS */
+.card-item-overlay {
+  background-color: yellow;
+  color: black;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* PROFILE */
+.profile-avatar {
+  border-radius: 50%;
+  max-width: 200px;
+  max-height: 200px;
+  cursor: pointer;
+}
+
+.profile-avatar-active {
+  cursor: pointer;
+}
+
+/* FRIENDS */
+.friends-box {
+  max-height: 320px;
+}
+
+.friend-list-avatar {
+  border-radius: 50%;
+  width: 50px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.search-list-avatar {
+  border-radius: 50%;
+  width: 85%;
+  object-fit: cover;
+}
+
+/* ALERTS */
+.alert-msg-error {
+  background-color: rgba(241, 169, 160, 0.7);
+  color: #f22613;
+  padding-left: 10px;
+  border-radius: 9999px;
+}
+
+.alert-msg-error:hover {
+  background-color: rgba(241, 169, 160, 1);
+  color: #cf000f;
+}
+
+.alert-msg-success {
+  background-color: rgba(123, 239, 178, 1);
+  color: #26a65b;
+  padding-left: 10px;
+  border-radius: 9999px;
+}
+
+.alert-msg-success:hover {
+  background-color: rgba(123, 239, 178, 0.7);
+  color: #1e824c;
+}
+/*****************************************/
+/* COLOR GATE THEMES */
+/*****************************************/
+
+/* SPRING */
+
+.color-gate-spring,
+.color-gate-spring .modal-content {
+  background-color: #ecf0f1;
+}
+
+.color-gate-spring .btn-main,
+.color-gate-spring .bg-main {
+  background-color: #b6f290;
+  color: black;
+}
+
+.color-gate-spring .i-main {
+  color: #ff760e;
+}
+
+.color-gate-spring .i-main:hover {
+  color: #f3be2a;
+}
+
+.color-gate-spring .i-secondary {
+  color: #f199c2;
+}
+
+.color-gate-spring .i-secondary:hover {
+  color: #e8457a;
+}
+
+.color-gate-spring .highlight {
+  color: black;
+}
+
+.color-gate-spring .btn-highlight {
+  background-color: #9d8dd5;
+  color: whitesmoke;
+}
+
+.color-gate-spring .btn-highlight:hover {
+  background-color: #d9bbf9;
+  color: white;
+}
+
+.color-gate-spring .navbar-title {
+  color: #9d8dd5;
+}
+
+.color-gate-spring .link {
+  color: #9d8dd5;
+}
+
+.color-gate-spring .link:hover {
+  color: #9d8dd5;
+}
+
+.color-gate-spring .btn-tertiary {
+  background-color: #ff760e;
+  color: whitesmoke;
+}
+
+.color-gate-spring .btn-tertiary:hover {
+  background-color: #f3be2a;
+  color: white;
+}
+
+.color-gate-spring .navbar a {
+  color: #2e3131;
+}
+
+.color-gate-spring .navbar a:hover {
+  color: #e4e9ed;
+}
+
+.color-gate-spring .hover-active-main:hover {
+  color: #b6f290;
+  cursor: pointer;
+}
+
+.color-gate-spring .spinner {
+  color: #b6f290;
+}
+
+/*****************************************/
+
+/* SUMMER */
+
+.color-gate-summer,
+.color-gate-summer .modal-content {
+  background-color: #fefad4;
+}
+
+.color-gate-summer .modal-content,
+.color-gate-summer .modal-content .link {
+  color: #008080;
+}
+
+.color-gate-summer .btn-main,
+.color-gate-summer .bg-main {
+  background-color: #008080;
+  color: #e8ecf1;
+}
+
+.color-gate-summer .i-main {
+  color: #66b2b2;
+}
+
+.color-gate-summer .i-main:hover {
+  color: #b2d8d8;
+}
+
+.color-gate-summer .i-secondary {
+  color: #ff9a00;
+}
+
+.color-gate-summer .i-secondary:hover {
+  color: #ffc100;
+}
+
+.color-gate-summer .highlight {
+  color: #2e3131;
+}
+
+.color-gate-summer .btn-highlight {
+  background-color: #ff9a00;
+  color: #2e3131;
+}
+
+.color-gate-summer .btn-highlight:hover {
+  background-color: #ffc100;
+  color: white;
+}
+
+.color-gate-summer .link {
+  color: #ff9a00;
+}
+
+.color-gate-summer .link:hover {
+  color: #ffc100;
+}
+
+.color-gate-summer .navbar-title {
+  color: #ff9a00;
+}
+
+.color-gate-summer .btn-tertiary {
+  background-color: #ff4d00;
+  color: #2e3131;
+}
+
+.color-gate-summer .btn-tertiary:hover {
+  background-color: #ff7400;
+  color: #95a5a6;
+}
+
+.color-gate-summer .navbar a {
+  color: #e8ecf1;
+}
+
+.color-gate-summer .navbar a:hover {
+  color: #bfbfbf;
+}
+
+.color-gate-summer .hover-active-main:hover {
+  color: #008080;
+  cursor: pointer;
+}
+
+.color-gate-summer .spinner {
+  color: #008080;
+}
+
+/*****************************************/
+
+/* AUTUMN */
+
+.color-gate-autumn,
+.color-gate-autumn .modal-content {
+  background-color: #fde3a7;
+}
+
+.color-gate-autumn .btn-main,
+.color-gate-autumn .bg-main {
+  background-color: #9b4f0f;
+  color: #19373f;
+}
+
+.color-gate-autumn .i-main {
+  color: #c99e10;
+}
+
+.color-gate-autumn .i-main:hover {
+  color: #9b4f0f;
+}
+
+.color-gate-autumn .i-secondary {
+  color: #1e434c;
+}
+
+.color-gate-autumn .i-secondary:hover {
+  color: #c99e10;
+}
+
+.color-gate-autumn .highlight {
+  color: #2e3131;
+}
+
+.color-gate-autumn .btn-highlight {
+  background-color: #1e434c;
+  color: whitesmoke;
+}
+
+.color-gate-autumn .btn-highlight:hover {
+  background-color: #c99e10;
+  color: white;
+}
+
+.color-gate-autumn .link {
+  color: #c99e10;
+}
+
+.color-gate-autumn .link:hover {
+  color: #d35400;
+}
+
+.color-gate-autumn .navbar-title {
+  color: #c99e10;
+}
+
+.color-gate-autumn .btn-tertiary {
+  background-color: #c99e10;
+  color: #19373f;
+}
+
+.color-gate-autumn .btn-tertiary:hover {
+  background-color: #d35400;
+  color: whitesmoke;
+}
+
+.color-gate-autumn .navbar a {
+  color: #19373f;
+}
+
+.color-gate-autumn .navbar a:hover {
+  color: #bfbfbf;
+}
+
+.color-gate-autumn .hover-active-main:hover {
+  color: #9b4f0f;
+  cursor: pointer;
+}
+
+.color-gate-autumn .spinner {
+  color: #c99e10;
+}
+
+/*****************************************/
+
+/* WINTER */
+
+.color-gate-winter,
+.color-gate-winter .modal-content {
+  background-color: #e8ecf1;
+}
+
+.color-gate-winter .btn-main,
+.color-gate-winter .bg-main {
+  background-color: #b8c6f9;
+  color: #19373f;
+}
+
+.color-gate-winter .i-main {
+  color: #b7e9f4;
+}
+
+.color-gate-winter .i-main:hover {
+  color: #8b9bec;
+}
+
+.color-gate-winter .i-secondary {
+  color: #1e434c;
+}
+
+.color-gate-winter .i-secondary:hover {
+  color: #b7e9f4;
+}
+
+.color-gate-winter .highlight {
+  color: #2e3131;
+}
+
+.color-gate-winter .btn-highlight {
+  background-color: #1e434c;
+  color: whitesmoke;
+}
+
+.color-gate-winter .btn-highlight:hover {
+  background-color: #b7e9f4;
+  color: white;
+}
+
+.color-gate-winter .link {
+  color: #292727;
+}
+
+.color-gate-winter .link:hover {
+  color: #5c5858;
+}
+
+.color-gate-winter .navbar-title {
+  color: #b7e9f4;
+}
+
+.color-gate-winter .btn-tertiary {
+  background-color: #b7e9f4;
+  color: #19373f;
+}
+
+.color-gate-winter .btn-tertiary:hover {
+  background-color: #5c5858;
+  color: whitesmoke;
+}
+
+.color-gate-winter .navbar a {
+  color: #19373f;
+}
+
+.color-gate-winter .navbar a:hover {
+  color: #bfbfbf;
+}
+
+.color-gate-winter .hover-active-main:hover {
+  color: #b8c6f9;
+  cursor: pointer;
+}
+
+.color-gate-winter .spinner {
+  color: #b8c6f9;
+}
+
+/*****************************************/
