@@ -1,5 +1,5 @@
 const express = require("express");
-
+const path = require("path");
 const connectDB = require("./config/db");
 
 const rateLimit = require("express-rate-limit");
@@ -9,25 +9,6 @@ const xss = require("xss-clean");
 const hpp = require("hpp");
 
 const chalk = require("chalk");
-
-// BDD
-/* mongoose.connect(
-  "mongodb://localhost:27017/socialMonkeysDB",
-  {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  },
-  (err, db) => {
-    if (err) {
-      console.log(err);
-      console.log(chalk.red("DATABASE ERROR"));
-    } else {
-      console.log(chalk.green("DATABASE ONLINE"));
-    }
-  }
-); */
 
 const app = express();
 
@@ -65,9 +46,6 @@ require("./models/User");
 
 // ROUTES
 
-// base
-app.get("/", (req, res) => res.json({ msg: "welcome to Social Monkeys!" }));
-
 // all
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/friends", require("./routes/friendRoutes"));
@@ -75,6 +53,15 @@ app.use("/api/posts", require("./routes/postRoutes"));
 app.use("/api/images", require("./routes/imageRoutes"));
 app.use("/api/comments", require("./routes/commentRoutes"));
 
+// Serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  // set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 // PORT
 const PORT = process.env.PORT || 5000;
 
