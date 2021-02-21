@@ -34,7 +34,13 @@ router
   .get(imageController.getImage)
   .patch(
     protect,
-    [check("description", "A description cannot be empty").not().isEmpty()],
+    [
+      check("description", "A description cannot be empty")
+        .not()
+        .isEmpty()
+        .trim()
+        .escape(),
+    ],
     imageController.editImage
   )
   .delete(protect, imageController.deleteImage);

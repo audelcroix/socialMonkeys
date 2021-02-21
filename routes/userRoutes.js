@@ -25,13 +25,19 @@ router
 // Register as new user
 router.route("/register").post(
   [
-    check("username", "Username is required").isLength({
-      min: 3,
-    }),
-    check("email", "Please include a valide email").isEmail(),
-    check("password", "Please enter an 8+ long password").isLength({
-      min: 8,
-    }),
+    check("username", "Username is required")
+      .isLength({
+        min: 3,
+      })
+      .trim()
+      .escape(),
+    check("email", "Please include a valide email").isEmail().normalizeEmail(),
+    check("password", "Please enter an 8+ long password")
+      .isLength({
+        min: 8,
+      })
+      .trim()
+      .escape(),
   ],
   userController.registerNewUser
 );
@@ -41,8 +47,13 @@ router
   .route("/login")
   .post(
     [
-      check("email", "Email invalid").isEmail(),
-      check("password", "Password required").exists().not().isEmpty(),
+      check("email", "Email invalid").isEmail().normalizeEmail(),
+      check("password", "Password required")
+        .exists()
+        .not()
+        .isEmpty()
+        .trim()
+        .escape(),
     ],
     userController.loginUser
   );
@@ -58,7 +69,7 @@ router
   .route("/updateusername")
   .post(
     protect,
-    [check("username", "Username is required").not().isEmpty()],
+    [check("username", "Username is required").not().isEmpty().trim().escape()],
     userController.updateUser
   );
 
@@ -67,7 +78,7 @@ router
   .route("/updateusertheme")
   .post(
     protect,
-    [check("newTheme", "A theme is required").not().isEmpty()],
+    [check("newTheme", "A theme is required").not().isEmpty().trim().escape()],
     userController.updateUserTheme
   );
 

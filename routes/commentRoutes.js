@@ -19,12 +19,24 @@ router
   .route("/:id")
   .post(
     protect,
-    [check("content", "A comment cannot be empty").not().isEmpty()],
+    [
+      check("content", "A comment cannot be empty")
+        .not()
+        .isEmpty()
+        .trim()
+        .escape(),
+    ],
     commentController.createComment
   )
   .patch(
     protect,
-    [check("content", "A post cannot be empty").not().isEmpty()],
+    [
+      check("content", "A post cannot be empty")
+        .not()
+        .isEmpty()
+        .trim()
+        .escape(),
+    ],
     commentController.editComment
   )
   .delete(protect, commentController.deleteComment);

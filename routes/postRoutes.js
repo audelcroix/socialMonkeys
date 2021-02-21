@@ -11,7 +11,13 @@ router
   .route("/")
   .post(
     protect,
-    [check("content", "A post cannot be empty").not().isEmpty()],
+    [
+      check("content", "A post cannot be empty")
+        .not()
+        .isEmpty()
+        .trim()
+        .escape(),
+    ],
     postController.createPost
   );
 
@@ -27,7 +33,13 @@ router
   .get(postController.getPost)
   .patch(
     protect,
-    [check("content", "A post cannot be empty").not().isEmpty()],
+    [
+      check("content", "A post cannot be empty")
+        .not()
+        .isEmpty()
+        .trim()
+        .escape(),
+    ],
     postController.editPost
   )
   .delete(protect, postController.deletePost);
